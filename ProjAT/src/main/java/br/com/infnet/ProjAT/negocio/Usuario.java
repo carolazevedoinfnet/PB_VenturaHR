@@ -22,6 +22,7 @@ public class Usuario {
 	private String nome;
 	private String endereco;
 	private String telefone;
+	private String login;
 	private String email;
 	private String senha;
 	private String cpf;
@@ -37,11 +38,12 @@ public class Usuario {
 	}
 	
 	
-	public Usuario(String nome, String endereco, String telefone, String email, String senha, String cpf, String razao, String cnpj, Character tipo ) {
+	public Usuario(String nome, String endereco, String telefone, String login, String email, String senha, String cpf, String razao, String cnpj, Character tipo ) {
 		this();
 		this.setNome(nome);
 		this.setEndereco(endereco);
 		this.setTelefone(telefone);
+		this.setLogin(login);
 		this.setEmail(email);
 		this.setSenha(senha);
 		this.setCpf(cpf);
@@ -52,8 +54,14 @@ public class Usuario {
 	
 	@Override
 	public String toString() {
-		return String.format ("%s", this.getNome());
-				}
+		return String.format("%s - %s - %s", 
+
+				this.nome,
+				this.login,
+				this.senha
+	
+				);
+	}
 	
 
 	public void imprimir() {
@@ -100,6 +108,13 @@ public class Usuario {
 		this.telefone = telefone;
 	}
 
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
 
 	public String getEmail() {
 		return email;

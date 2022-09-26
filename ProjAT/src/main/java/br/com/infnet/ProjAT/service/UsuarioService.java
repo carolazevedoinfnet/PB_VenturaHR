@@ -16,6 +16,12 @@ public class UsuarioService {
 	@Autowired
 	private IUsuarioRepository usuarioRepository;
 
+	public Usuario isValid(String login, String senha) {
+		
+		
+	
+		return usuarioRepository.autenticacao(login, senha);
+	}
 
 	public void incluir(Usuario usuario) {
 		usuarioRepository.save(usuario);
