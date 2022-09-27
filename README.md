@@ -7,4 +7,4 @@ Os principais usuários são: Usuário Administrador, Usuário Candidato e Usuá
 
 Principais Tecnologias utilizadas: JAVA, Javascript, MySQL e Postman
 
-O Git contém as especificações, diagramas (astah uml), testes e videos demonstrativos da plataforma
+O Git contém as especificações, diagramas (astah uml), testes e videos (dentro das pastas dos TPs) demonstrativos da evolução da plataforma
