@@ -29,7 +29,6 @@
 		<th>Cidade</th>
  		<th>Estado</th>
  		<th>Tipo de Contratação</th>
- 		<th>Data</th>
        
     
       </tr>
@@ -37,19 +36,19 @@
 		
     <tbody>
 
-		<c:forEach var="m" items="${listaVagas}">
+		<c:forEach var="v" items="${listaVagas}">
 
 			 <tr>
-			        <td>${m.id}</td>
-			        <td>${m.cargo}</td>
-			     	<td>${m.descricao}</td>
-					<td>${m.empresa}</td>
-					<td>${m.cidade}</td>
-					<td>${m.estado}</td>
-					<td>${m.contratacao}</td>
-					<td>${m.data}</td>
+			        <td>${v.id}</td>
+			        <td>${v.cargo}</td>
+			     	<td>${v.descricao}</td>
+					<td>${v.empresa}</td>
+					<td>${v.cidade}</td>
+					<td>${v.estado}</td>
+					<td>${v.contratacao}</td>
 					
-		        <td><a href="/vaga/excluir/${m.id}">excluir</a></td>
+					
+		        <td><a href="/vaga/excluir/${v.id}">excluir</a></td>
 			      </tr>
 			
 			

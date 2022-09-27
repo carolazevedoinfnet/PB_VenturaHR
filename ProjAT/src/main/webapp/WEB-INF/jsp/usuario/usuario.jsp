@@ -51,16 +51,20 @@
  
    
 	
-    <div class="form-group">
-      <label for="plano">Tipo de Conta:</label>
-		<select name="plano" class="form-control">
-			<option value="--">----</option>
-			<option value="Administrador">Administrador</option>
-			<option value="Candidato">Candidato</option>
-			<option value="Empresa">Empresa</option>
-		
-		</select>
-    </div>
+    
+    <form action="/usuario" method="post">
+            <div class="form-group">
+                <label>Tipo de Conta:</label>
+                <label class="radio-inline">
+                    <input type="radio" value="A" name="tipo">Administrador
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" value="C" name="tipo">Candidato
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" value="E" name="tipo">Empresa
+                </label>
+            </div>
     
      <br>
   

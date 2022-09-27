@@ -26,7 +26,6 @@
 		<th>ID</th>
 		<th>Vaga</th>
 		<th>Critério</th>
-		<th>Data</th>
 		<th>Excluir</th>
   
        
@@ -36,19 +35,16 @@
 		
     <tbody>
 
-		<c:forEach var="c" items="${listaResposta}">
+		<c:forEach var="r" items="${listaResposta}">
 
 			 <tr>
-			         <td>${c.id}</td>
-			         <td>${c.getUsuario()}</td>
-			         <td>${c.getVaga()}</td>
-			         <fmt:parseDate value="${c.getData()}" type="date" pattern="yyyy-MM-dd" var="dataResposta"/>
-					<td class="text-center"><fmt:formatDate value="${dataResposta}" type="date" pattern="dd/MM/yyyy"/></td>
-			         <td>${c.hora}</td>
-			          <td>${c.getCriterios()}</td>
+			         <td>${r.id}</td>
+			         <td>${r.getUsuario()}</td>
+			         <td>${r.getVaga()}</td>
+			          <td>${r.getCriterios()}</td>
 			    
 			         
-			        <td><a href="/resposta/excluir/${c.id}">excluir</a></td>
+			        <td><a href="/resposta/excluir/${r.id}">excluir</a></td>
 			      </tr>
 			
 			

@@ -21,63 +21,75 @@
   <h2>Cadastro de Vagas</h2>
 
   <form action="/vaga" method="post">
+                <div class="form-group">
+                    <input type="hidden" class="form-control" name="usuarioId" value=${usuario.id}>
+                </div>
+                <div class="form-group">
+                    <label>Cargo:</label>
+                    <input type="text" class="form-control" name="cargo" value=${vaga.cargo}>
+                </div>
+                 <div class="form-group">
+                    <label>Descrição:</label>
+                    <input type="text" class="form-control" name="descricao" value=${vaga.descricao}>
+                </div>
+                <div class="form-group">
+                    <label>Empresa:</label>
+                    <input type="text" class="form-control" name="empresa" value=${vaga.empresa}>
+                </div>
+                <div class="form-group">
+                    <label>Cidade:</label>
+                    <input type="text" class="form-control" name="cidade" value=${vaga.cidade}>
+                </div>
+                
+                <div class="form-group">
+                    <label>Estado:</label>
+                    <input type="text" class="form-control" name="estado" value=${vaga.estado}>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Contratatação:</label>
+                    <input type="text" class="form-control" name="contratacao" value=${vaga.contratacao}>
+                </div>
+                
+                     
+               <button type="submit" class="btn btn-primary">Continuar</button>
+                
+            </form>
+
+            <c:if test="${not empty vaga}">
+                <h4 class="text-center fs-5">Informar os critérios da vaga</h4>
+                <form action="/criterio" method="post">
+                    <div class="form-group">
+                        <label>Nome:</label>
+                        <input type="text" class="form-control" name="nome" value=${criterio.nome}>
+                    </div>
+                    <div class="form-group">
+                        <label>Perfil:</label>
+                        <input type="number" min="1" max="5" class="form-control" name="perfil" value=${criterio.perfil}>
+                    </div>
+                    <div class="form-group">
+                        <label>Peso:</label>
+                        <input type="number" min="1" max="5" class="form-control" name="peso" value=${criterio.peso}>
+                    </div>
+                    
+                   <button type="submit" class="btn btn-default">Adicionar Critério</button>
+                </form>
+                
+                <hr>
+                <form action="listaVagas" method="post">
+                    <button type="submit" class="btn btn-default">Cadastrar Vaga</button>
+                </form>
+                
+            </c:if>
+            
+             <br>
   
-    <div class="form-group">
-      <label for="usr">Cargo:</label>
-      <input type="text" class="form-control" name="cargo">
-    </div>
-
-    <div class="form-group">
-      <label for="usr">Descrição:</label>
-      <input type="text" class="form-control" name="descricao">
-    </div>
-    
-     <div class="form-group">
-      <label for="usr">Empresa:</label>
-      <input type="text" class="form-control" name="empresa">
-    </div>
-    
-     <div class="form-group">
-      <label for="usr">Cidade:</label>
-      <input type="text" class="form-control" name="cidade">
-    </div>
-    
-     <div class="form-group">
-      <label for="usr">Estado:</label>
-      <input type="text" class="form-control" name="estado">
-    </div>
-    
-     
- 
-    	<div class="form-group">
-	  <label for="usr">Tipo de Contratação:</label>
-		<div class="form-check">
-		  <label class="form-check-label">
-			<input type="radio" class="form-check-input" name="contratacao" value="true"> CLT
-		  </label>
-		</div>
-		<div class="form-check">
-		  <label class="form-check-label">
-			<input type="radio" class="form-check-input" name="contratacao" value="false" > Freelancer
-		  </label>
-		</div>
-	</div>
-	
-	
-			<div class="form-group">
-				<label for="hora">Data da vaga:</label> <input type="date"
-					name="dataVaga" required>
-			</div>
-	
-
-
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
-  </form>
-  
-  <br>
  	<c:import url="/WEB-INF/jsp/footer.jsp"/>	
+ 	
+        </div>		
+
+  
+ 
 		
-</div>
 
 </body>
 </html>

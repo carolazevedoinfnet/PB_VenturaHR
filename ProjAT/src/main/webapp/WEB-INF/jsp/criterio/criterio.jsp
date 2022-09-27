@@ -28,17 +28,17 @@
   <form action="/criterio" method="post">
   
     <div class="form-group">
-      <label for="descricao">Nome:</label>
+      <label for="nome">Nome:</label>
       <input type="text" class="form-control" name="nome">
     </div>
     
       <div class="form-group">
-      <label for="descricao">Perfil:</label>
+      <label for="perfil">Perfil:</label>
       <input type="text" class="form-control" name="perfil">
     </div>
     
        <div class="form-group">
-      <label for="descricao">Peso:</label>
+      <label for="peso">Peso:</label>
       <input type="text" class="form-control" name="peso">
     </div>
     

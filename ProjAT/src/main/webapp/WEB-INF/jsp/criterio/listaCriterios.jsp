@@ -24,21 +24,26 @@
 		    <thead>
 		   <tr>
 		<th>ID</th>
-        <th>Descrição</th>
+        <th>Nome</th>
+        <th>Perfil</th>
+        <th>Peso</th>
         
    
       </tr>
 		    </thead>
 
     <tbody>
-		<c:forEach var="e" items="${listaCriterios}">
+		<c:forEach var="c" items="${listaCriterios}">
+		
 
 		
 		 <tr>
-			        <td>${e.id}</td>
-			        <td>${e.descricao}</td>
+			        <td>${c.id}</td>
+			        <td>${c.nome}</td>
+			         <td>${c.perfil}</td>
+			          <td>${c.peso}</td>
 		
-			        <td><a href="/criterio/excluir/${e.id}">excluir</a></td>
+			        <td><a href="/criterio/excluir/${c.id}">excluir</a></td>
 			      </tr>
 			
 			

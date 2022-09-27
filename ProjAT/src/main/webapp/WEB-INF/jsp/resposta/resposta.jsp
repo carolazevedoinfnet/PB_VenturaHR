@@ -31,39 +31,41 @@
 		<form action="/resposta/incluir" method="post">
 
 
+        <c:if test="${not empty vagas}">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Cargo</th>
+                    <th>Cidade</th>
+                    <th>Tipo de Contratatação</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="vaga" items="${vagas}" varStatus="id">
+                    <tr>
+                        <td>${vaga.id}</td>
+                        <td>${vaga.cargo}</td>
+                        <td>${vaga.cidade}</td>
+                        <td>${vaga.contratacao}</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </c:if>
+
+        <c:if test="${empty vagas}">
+            <h4>Não há nenhuma vaga publicada no sistema!</h4>
+        </c:if>
+    </div>
+
+</div>
 
 
-			<div class="form-group">
-				<label for="hora">Dia da resposta:</label> <input type="date"
-					name="dataResposta" required>
-			</div>
-
-
-			
-
-
-			<div class="form-group">
-				<label for="usr">Criterios:</label>
-				<c:if test="${not empty criterios}">
-					<div class="form-check">
-						<label class="form-check-label">
-							<c:forEach var="e" items="${criterios}">
-								<input type="checkbox" class="form-check-input" name="criterioIds" value="${e.id}">${e.descricao}<br>
-							</c:forEach>
-						</label>
-					</div>
-				</c:if>
-				<c:if test="${empty criterios}">
-				<label for="usr">Nenhum critério cadastrado!</label>
-				</c:if>
-			</div>
-
-
-			<button type="submit" class="btn btn-primary">Cadastrar</button>
+			<button type="submit" class="btn btn-primary">Responder</button>
 		</form>
 		<br>
 
-		<c:import url="/WEB-INF/jsp/footer.jsp" />
 
 	</div>
 

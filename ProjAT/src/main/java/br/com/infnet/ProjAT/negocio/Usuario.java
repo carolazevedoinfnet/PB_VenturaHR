@@ -151,7 +151,7 @@ public class Usuario {
 	}
 
 
-	public void setTipo(Character tipo) {
+	public void setTipo(char tipo) {
 		this.tipo = tipo;
 	}
 
