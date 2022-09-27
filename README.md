@@ -12,13 +12,13 @@ O Git contém as especificações, diagramas (astah uml), testes e videos (dentr
 
 Endereços para Testes:
 
-localhost:8080/voltar
-localhost:8080/admin
-localhost:8080/candidato
-localhost:8080/empresa
-localhost:8080/usuario
-localhost:8080/usuarios
-localhost:8080/vaga
-localhost:8080/vagas
-localhost:8080/resposta
+*localhost:8080/voltar
+*localhost:8080/admin
+*localhost:8080/candidato
+*localhost:8080/empresa
+*localhost:8080/usuario
+*localhost:8080/usuarios
+*localhost:8080/vaga
+*localhost:8080/vagas
+*localhost:8080/resposta
 
